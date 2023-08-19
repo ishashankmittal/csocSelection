@@ -7,6 +7,5 @@ console.log('router loaded');
 
 
 router.get('/', homeController.home);
-router.get('/user_sign_in', homeController.signIn);
-router.get('/user_sign_up', homeController.signUp);
+router.get('/users',require('./users'));
 module.exports=router;
