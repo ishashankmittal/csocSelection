@@ -1,6 +1,8 @@
+//require the library
 const mongoose=require('mongoose');
 
-mongoose.connect('mongodb://localhost/csocSelection');
+//connect to the database
+mongoose.connect('mongodb://localhost/socialvista');
 
 //acquire the connection (to check if it is connected)
 const db=mongoose.connection;

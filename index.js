@@ -1,6 +1,6 @@
 const express=require('express');
 const app=express();
-const port=8000;
+const port=3000;
 const expressLayouts=require('express-ejs-layouts');
 const db=require('./config/mongoose');
 const user= require('./models/user');
@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser');
 //used for session cookie
 const  session=require('express-session');
 const passport=require('passport');
-// const passportLocal=require('./config/passport-local-strategy');
+const passportLocal=require('./config/passport-local-strategy');
 
 
 app.use(express.urlencoded());
@@ -31,10 +31,10 @@ app.use(session({
     }
 }));
 
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
-// app.use(passport.setAuthenticatedUser);
+app.use(passport.setAuthenticatedUser);
 
 app.use(expressLayouts); 
 //extract styles and scripts from the sub pages
