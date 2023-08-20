@@ -1,14 +1,16 @@
-<h1>Sign In</h1>
-
-<form action="/users/create-session" method="post">
+<div class="container">
+    <h1>Sign In</h1>
     
-    <div class="form-group">
-        <input name="email" type="email" placeholder="Your Email" reqiuired>
+    <form action="/users/create-session" method="post">
+        
+        <div class="form-group">
+            <input name="email" type="email" placeholder="Your Email" reqiuired>
+        </div>
+        <div class="form-group">
+            <input name="password" type="password" placeholder="Enter Password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Sign In</button>
+        </div>
+    </form>
     </div>
-    <div class="form-group">
-        <input name="password" type="text" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <button type="submit">Sign In</button>
-    </div>
-</form>

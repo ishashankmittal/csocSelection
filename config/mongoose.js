@@ -2,7 +2,7 @@
 const mongoose=require('mongoose');
 
 //connect to the database
-mongoose.connect('mongodb://localhost/socialvista');
+mongoose.connect('mongodb://localhost/socialvista2');
 
 //acquire the connection (to check if it is connected)
 const db=mongoose.connection;
